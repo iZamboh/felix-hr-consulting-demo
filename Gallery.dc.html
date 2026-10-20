@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Jost:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<link rel="stylesheet" href="felix.css">
+</helmet>
+<div class="site" data-screen-label="Gallery">
+  <dc-import name="Header" active="gallery" style="position: sticky; top: var(--space-0); z-index: var(--z-header)" hint-size="100%,88px"></dc-import>
+  <main class="page">
+    <section class="section section-page-hero">
+      <div class="container">
+        <div class="page-hero">
+          <div class="eyebrow"><span class="eyebrow-rule"></span><span>Gallery</span></div>
+          <h1 class="page-title">Inside Felix</h1>
+          <p class="lead">Where and how we work: the office in Frosinone, workshops with client teams and the travel desk on an ordinary week.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sand">
+      <div class="container">
+        <figure class="feature">
+          <div class="feature-media">
+            <img class="photo" src="uploads/Il%20re%20dell'HR%20Consulting.png" alt="Felix HR Consulting portrait: a consultant in a black suit wearing a gold crown and holding car keys">
+          </div>
+          <figcaption class="feature-copy">
+            <span class="label">Campaign portrait</span>
+            <h2 class="heading-section">Il re dell'HR Consulting</h2>
+            <p class="text">The crown is a joke. The car keys are not. A lot of business travel in our province starts on the road, and every kilometre has to be reimbursed correctly.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <div class="placeholder"><span class="placeholder-label">Photo to add · office</span></div>
+            <figcaption class="caption">Our office in Frosinone, where client accounts are run day to day.</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="placeholder"><span class="placeholder-label">Photo to add · workshop</span></div>
+            <figcaption class="caption">A policy workshop with a client's HR and finance teams.</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="placeholder"><span class="placeholder-label">Photo to add · travel desk</span></div>
+            <figcaption class="caption">The travel desk on a Monday morning of bookings.</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="placeholder"><span class="placeholder-label">Photo to add · expense review</span></div>
+            <figcaption class="caption">Monthly expense review, before reports go to accounting.</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="placeholder"><span class="placeholder-label">Photo to add · team</span></div>
+            <figcaption class="caption">The Felix team.</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <div class="placeholder"><span class="placeholder-label">Photo to add · client visit</span></div>
+            <figcaption class="caption">Visiting clients across the province of Frosinone.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-navy">
+      <div class="container">
+        <div class="cta-band">
+          <div class="cta-copy">
+            <div class="eyebrow"><span class="eyebrow-rule"></span><span>Next step</span></div>
+            <h2 class="heading-section">Come and meet us in Frosinone.</h2>
+            <p class="text">We're happy to meet at our office or at yours. Write to us and we'll find a date.</p>
+          </div>
+          <a class="button-light" href="Contact.dc.html">Contact us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <dc-import name="Footer" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

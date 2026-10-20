@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Jost:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<link rel="stylesheet" href="felix.css">
+</helmet>
+<div class="site" data-screen-label="Services">
+  <dc-import name="Header" active="services" style="position: sticky; top: var(--space-0); z-index: var(--z-header)" hint-size="100%,88px"></dc-import>
+  <main class="page">
+    <section class="section section-page-hero">
+      <div class="container">
+        <div class="page-hero">
+          <div class="eyebrow"><span class="eyebrow-rule"></span><span>Services</span></div>
+          <h1 class="page-title">From the booking to the payslip.</h1>
+          <p class="lead">We cover every step of a business trip: booking it, paying for it, reporting it, reimbursing it and keeping the traveler safe while it happens. Take one service or all four.</p>
+          <nav class="page-index" aria-label="Services on this page">
+            <a class="chip-link" href="#travel"><span class="chip-index">01</span><span>Business Travel</span></a>
+            <a class="chip-link" href="#expenses"><span class="chip-index">02</span><span>Expenses</span></a>
+            <a class="chip-link" href="#reimbursements"><span class="chip-index">03</span><span>Reimbursements</span></a>
+            <a class="chip-link" href="#risk"><span class="chip-index">04</span><span>Travel Risk</span></a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-flush">
+      <div class="container">
+        <div class="service-list">
+          <article class="service-detail" id="travel">
+            <div class="service-aside">
+              <span class="numeral">01</span>
+              <h2 class="heading-section">Business Travel Management</h2>
+            </div>
+            <div class="service-body">
+              <p class="lead">We book and manage business trips for your employees, from a single train to Milan to a week of meetings abroad. Every booking is checked against your travel policy before it is confirmed.</p>
+              <div class="list-block">
+                <span class="label">What we handle</span>
+                <ul class="list-check">
+                  <li class="list-item"><span class="dot"></span><span>Flights, trains, hotels and car hire through one booking channel</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Approval by the right manager before anything is paid</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Negotiated rates with airlines, hotel groups and rental companies</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Changes and cancellations handled by us, not by the traveler</span></li>
+                  <li class="list-item"><span class="dot"></span><span>One invoice per month, split by cost centre</span></li>
+                </ul>
+              </div>
+              <div class="outcome">
+                <span class="label">What changes for you</span>
+                <p class="text">You see what travel costs by person, department and route. Your travelers stop spending their evenings booking hotels.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-detail" id="expenses">
+            <div class="service-aside">
+              <span class="numeral">02</span>
+              <h2 class="heading-section">Expense Management</h2>
+            </div>
+            <div class="service-body">
+              <p class="lead">Expense reports stop being a monthly chore. Employees photograph receipts as they go and the report builds itself.</p>
+              <div class="list-block">
+                <span class="label">What we handle</span>
+                <ul class="list-check">
+                  <li class="list-item"><span class="dot"></span><span>Receipt capture by phone, with the original archived digitally</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Automatic checks against your spending limits and categories</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Matching of company card transactions to receipts</span></li>
+                  <li class="list-item"><span class="dot"></span><span>VAT split out and ready for your accountant</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Export to your accounting software</span></li>
+                </ul>
+              </div>
+              <div class="outcome">
+                <span class="label">What changes for you</span>
+                <p class="text">Reports approved in days instead of weeks, fewer errors, and VAT you can actually recover.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-detail" id="reimbursements">
+            <div class="service-aside">
+              <span class="numeral">03</span>
+              <h2 class="heading-section">Reimbursement Management</h2>
+            </div>
+            <div class="service-body">
+              <p class="lead">When employees pay out of pocket or use their own car, they should be paid back correctly and on time. We calculate every reimbursement under Italian rules and pass it to payroll.</p>
+              <div class="list-block">
+                <span class="label">What we handle</span>
+                <ul class="list-check">
+                  <li class="list-item"><span class="dot"></span><span>Mileage reimbursement based on ACI tables</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Daily allowances for trips in Italy and abroad</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Out-of-pocket expenses, checked for traceable payment</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Correct tax treatment under article 51 of the TUIR</span></li>
+                  <li class="list-item"><span class="dot"></span><span>A monthly file ready for your payroll provider</span></li>
+                </ul>
+              </div>
+              <div class="outcome">
+                <span class="label">What changes for you</span>
+                <p class="text">Employees are paid back in the next pay cycle, and every reimbursement holds up if the tax office asks.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="service-detail" id="risk">
+            <div class="service-aside">
+              <span class="numeral">04</span>
+              <h2 class="heading-section">Travel Risk Management</h2>
+            </div>
+            <div class="service-body">
+              <p class="lead">If your people travel for work, you are responsible for their safety while they do. We help you meet that duty with procedures that work at two in the morning, not only on paper.</p>
+              <div class="list-block">
+                <span class="label">What we handle</span>
+                <ul class="list-check">
+                  <li class="list-item"><span class="dot"></span><span>Risk checks on destinations before travel is approved</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Pre-trip briefings for travelers going to higher-risk areas</span></li>
+                  <li class="list-item"><span class="dot"></span><span>A live record of who is travelling where</span></li>
+                  <li class="list-item"><span class="dot"></span><span>A 24-hour assistance line for your travelers</span></li>
+                  <li class="list-item"><span class="dot"></span><span>Incident procedures and insurance checks in line with D.Lgs. 81/2008</span></li>
+                </ul>
+              </div>
+              <div class="outcome">
+                <span class="label">What changes for you</span>
+                <p class="text">Documented duty of care, and a plan your team can follow when a flight is cancelled, a strike hits or a traveler falls ill.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sand">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow"><span class="eyebrow-rule"></span><span>Working together</span></div>
+          <h2 class="heading-section">Two ways to work with us</h2>
+        </div>
+        <div class="options">
+          <div class="card-panel">
+            <span class="label">Ongoing</span>
+            <h3 class="heading-card">Managed service</h3>
+            <p class="text">We run the services you choose every day: bookings, checks, reimbursements and reporting. You pay an agreed monthly fee and have one contact person.</p>
+          </div>
+          <div class="card-panel">
+            <span class="label">Fixed scope</span>
+            <h3 class="heading-card">Setup project</h3>
+            <p class="text">We review your current process, write the policy, set up the tools and train your team. After the handover your people run it, and we stay available for questions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-navy">
+      <div class="container">
+        <div class="cta-band">
+          <div class="cta-copy">
+            <div class="eyebrow"><span class="eyebrow-rule"></span><span>Next step</span></div>
+            <h2 class="heading-section">Not sure which service you need?</h2>
+            <p class="text">Tell us what bothers you most about travel and expenses today. We'll tell you where we would start.</p>
+          </div>
+          <a class="button-light" href="Contact.dc.html">Contact us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <dc-import name="Footer" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

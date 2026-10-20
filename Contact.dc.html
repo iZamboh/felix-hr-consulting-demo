@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Jost:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<link rel="stylesheet" href="felix.css">
+</helmet>
+<div class="site" data-screen-label="Contact">
+  <dc-import name="Header" active="contact" style="position: sticky; top: var(--space-0); z-index: var(--z-header)" hint-size="100%,88px"></dc-import>
+  <main class="page">
+    <section class="section section-page-hero">
+      <div class="container">
+        <div class="page-hero">
+          <div class="eyebrow"><span class="eyebrow-rule"></span><span>Contact</span></div>
+          <h1 class="page-title">Tell us how your company travels.</h1>
+          <p class="lead">A few lines about your company and what you'd like to fix are enough. We'll reply by email or call you back, whichever you prefer.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sand">
+      <div class="container">
+        <div class="contact">
+          <div class="contact-details">
+            <div class="detail">
+              <span class="label">Office</span>
+              <span class="detail-value">Frosinone (FR), Lazio</span>
+              <span class="text">Meetings at our office or yours, by appointment.</span>
+            </div>
+            <div class="detail">
+              <span class="label">Email</span>
+              <a class="detail-value" href="mailto:info@felixhrconsulting.it">info@felixhrconsulting.it</a>
+            </div>
+            <div class="detail">
+              <span class="label">Hours</span>
+              <span class="detail-value">Monday to Friday, 9:00 to 18:00</span>
+            </div>
+            <div class="detail">
+              <span class="label">Travelling right now?</span>
+              <span class="text">If you are already a client, use the 24-hour assistance number in your travel kit.</span>
+            </div>
+          </div>
+
+          <div class="form-mock" role="form" aria-label="Contact form, design mockup">
+            <div class="mock-banner"><span class="mock-tag">Mockup</span><span>Visual design only. This form has no submission logic and does not send messages.</span></div>
+            <h2 class="heading-card">Send us a request</h2>
+            <div class="form-row">
+              <label class="field"><span class="field-label">Full name</span><input class="input" type="text" name="name" autocomplete="name"></label>
+              <label class="field"><span class="field-label">Company</span><input class="input" type="text" name="company" autocomplete="organization"></label>
+            </div>
+            <div class="form-row">
+              <label class="field"><span class="field-label">Work email</span><input class="input" type="email" name="email" autocomplete="email"></label>
+              <label class="field"><span class="field-label">Phone <span class="field-hint">(optional)</span></span><input class="input" type="tel" name="phone" autocomplete="tel"></label>
+            </div>
+            <label class="field"><span class="field-label">Company size</span>
+              <span class="select"><select class="select-control" name="size"><option value="">Choose one</option><option>SME</option><option>Mid-sized company</option><option>Large enterprise</option></select><span class="select-arrow" aria-hidden="true">▾</span></span>
+            </label>
+            <div class="field" role="group" aria-label="Services you are interested in">
+              <span class="field-label">Services you are interested in</span>
+              <div class="choices">
+                <label class="choice"><input class="checkbox" type="checkbox" name="travel"><span>Business Travel Management</span></label>
+                <label class="choice"><input class="checkbox" type="checkbox" name="expenses"><span>Expense Management</span></label>
+                <label class="choice"><input class="checkbox" type="checkbox" name="reimbursements"><span>Reimbursement Management</span></label>
+                <label class="choice"><input class="checkbox" type="checkbox" name="risk"><span>Travel Risk Management</span></label>
+              </div>
+            </div>
+            <label class="field"><span class="field-label">What would you like to fix?</span><textarea class="textarea" name="message" rows="5"></textarea></label>
+            <label class="consent"><input class="checkbox" type="checkbox" name="consent"><span>I agree that Felix HR Consulting may use these details to reply to my request, as described in the privacy policy.</span></label>
+            <div class="form-actions">
+              <button class="button-primary" type="button">Send request</button>
+              <span class="form-note">Mockup only. Nothing is sent.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <dc-import name="Footer" hint-size="100%,360px"></dc-import>
+</div>
+</x-dc>
+</body>
+</html>

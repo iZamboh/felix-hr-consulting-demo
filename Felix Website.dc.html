@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Jost:wght@400;500&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<link rel="stylesheet" href="felix.css">
+</helmet>
+<div class="showcase">
+  <header class="showcase-intro">
+    <div class="eyebrow"><span class="eyebrow-rule"></span><span>Felix HR Consulting</span></div>
+    <h1 class="showcase-heading">Website screens</h1>
+    <p class="showcase-text">Five pages, each at desktop (1440), tablet (820) and mobile (390). Header and footer are shared components used by every page.</p>
+    <nav class="showcase-index" aria-label="Pages">
+      <a class="chip-link" href="#home"><span class="chip-index">01</span><span>Home</span></a>
+      <a class="chip-link" href="#services"><span class="chip-index">02</span><span>Services</span></a>
+      <a class="chip-link" href="#gallery"><span class="chip-index">03</span><span>Gallery</span></a>
+      <a class="chip-link" href="#about"><span class="chip-index">04</span><span>About</span></a>
+      <a class="chip-link" href="#contact"><span class="chip-index">05</span><span>Contact</span></a>
+    </nav>
+  </header>
+
+  <section class="showcase-section" id="home" data-screen-label="01 Home">
+    <div class="showcase-title-row"><span class="showcase-number">01</span><h2 class="showcase-title">Home</h2><a class="link-arrow" href="Home.dc.html">Open page →</a></div>
+    <div class="showcase-row">
+      <sc-if value="{{ showDesktop }}" hint-placeholder-val="{{ true }}"><div class="frame frame-desktop"><span class="frame-label">Desktop · 1440</span><div class="frame-screen"><dc-import name="Home" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+      <sc-if value="{{ showTablet }}" hint-placeholder-val="{{ true }}"><div class="frame frame-tablet"><span class="frame-label">Tablet · 820</span><div class="frame-screen"><dc-import name="Home" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+      <sc-if value="{{ showMobile }}" hint-placeholder-val="{{ true }}"><div class="frame frame-mobile"><span class="frame-label">Mobile · 390</span><div class="frame-screen"><dc-import name="Home" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+    </div>
+  </section>
+
+  <section class="showcase-section" id="services" data-screen-label="02 Services">
+    <div class="showcase-title-row"><span class="showcase-number">02</span><h2 class="showcase-title">Services</h2><a class="link-arrow" href="Services.dc.html">Open page →</a></div>
+    <div class="showcase-row">
+      <sc-if value="{{ showDesktop }}" hint-placeholder-val="{{ true }}"><div class="frame frame-desktop"><span class="frame-label">Desktop · 1440</span><div class="frame-screen"><dc-import name="Services" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+      <sc-if value="{{ showTablet }}" hint-placeholder-val="{{ true }}"><div class="frame frame-tablet"><span class="frame-label">Tablet · 820</span><div class="frame-screen"><dc-import name="Services" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+      <sc-if value="{{ showMobile }}" hint-placeholder-val="{{ true }}"><div class="frame frame-mobile"><span class="frame-label">Mobile · 390</span><div class="frame-screen"><dc-import name="Services" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+    </div>
+  </section>
+
+  <section class="showcase-section" id="gallery" data-screen-label="03 Gallery">
+    <div class="showcase-title-row"><span class="showcase-number">03</span><h2 class="showcase-title">Gallery</h2><a class="link-arrow" href="Gallery.dc.html">Open page →</a></div>
+    <div class="showcase-row">
+      <sc-if value="{{ showDesktop }}" hint-placeholder-val="{{ true }}"><div class="frame frame-desktop"><span class="frame-label">Desktop · 1440</span><div class="frame-screen"><dc-import name="Gallery" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+      <sc-if value="{{ showTablet }}" hint-placeholder-val="{{ true }}"><div class="frame frame-tablet"><span class="frame-label">Tablet · 820</span><div class="frame-screen"><dc-import name="Gallery" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+      <sc-if value="{{ showMobile }}" hint-placeholder-val="{{ true }}"><div class="frame frame-mobile"><span class="frame-label">Mobile · 390</span><div class="frame-screen"><dc-import name="Gallery" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+    </div>
+  </section>
+
+  <section class="showcase-section" id="about" data-screen-label="04 About">
+    <div class="showcase-title-row"><span class="showcase-number">04</span><h2 class="showcase-title">About</h2><a class="link-arrow" href="About.dc.html">Open page →</a></div>
+    <div class="showcase-row">
+      <sc-if value="{{ showDesktop }}" hint-placeholder-val="{{ true }}"><div class="frame frame-desktop"><span class="frame-label">Desktop · 1440</span><div class="frame-screen"><dc-import name="About" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+      <sc-if value="{{ showTablet }}" hint-placeholder-val="{{ true }}"><div class="frame frame-tablet"><span class="frame-label">Tablet · 820</span><div class="frame-screen"><dc-import name="About" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+      <sc-if value="{{ showMobile }}" hint-placeholder-val="{{ true }}"><div class="frame frame-mobile"><span class="frame-label">Mobile · 390</span><div class="frame-screen"><dc-import name="About" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+    </div>
+  </section>
+
+  <section class="showcase-section" id="contact" data-screen-label="05 Contact">
+    <div class="showcase-title-row"><span class="showcase-number">05</span><h2 class="showcase-title">Contact</h2><a class="link-arrow" href="Contact.dc.html">Open page →</a></div>
+    <div class="showcase-row">
+      <sc-if value="{{ showDesktop }}" hint-placeholder-val="{{ true }}"><div class="frame frame-desktop"><span class="frame-label">Desktop · 1440</span><div class="frame-screen"><dc-import name="Contact" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+      <sc-if value="{{ showTablet }}" hint-placeholder-val="{{ true }}"><div class="frame frame-tablet"><span class="frame-label">Tablet · 820</span><div class="frame-screen"><dc-import name="Contact" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+      <sc-if value="{{ showMobile }}" hint-placeholder-val="{{ true }}"><div class="frame frame-mobile"><span class="frame-label">Mobile · 390</span><div class="frame-screen"><dc-import name="Contact" hint-size="100%,1600px"></dc-import></div></div></sc-if>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showDesktop&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Frames&quot;},&quot;showTablet&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Frames&quot;},&quot;showMobile&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Frames&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      showDesktop: this.props.showDesktop ?? true,
+      showTablet: this.props.showTablet ?? true,
+      showMobile: this.props.showMobile ?? true
+    };
+  }
+}
+</script>
+</body>
+</html>

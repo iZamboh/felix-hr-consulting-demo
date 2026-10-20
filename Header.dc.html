@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="felix.css">
+</helmet>
+<header class="header">
+  <div class="header-bar">
+    <div class="header-inner">
+      <a class="logo" href="Home.dc.html" aria-label="Felix HR Consulting, home"><img class="logo-img" src="uploads/logo_felix.png" alt="Felix HR Consulting"></a>
+      <nav class="nav" aria-label="Main">
+        <sc-for list="{{ links }}" as="link" hint-placeholder-count="5"><a class="{{ link.cls }}" href="{{ link.href }}" aria-current="{{ link.current }}">{{ link.label }}</a></sc-for>
+      </nav>
+      <div class="header-action"><a class="button-primary" href="Contact.dc.html">Book a call</a></div>
+      <button class="menu-toggle" type="button" aria-label="{{ toggleLabel }}" aria-expanded="{{ open }}" onClick="{{ toggle }}"><span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span></button>
+    </div>
+  </div>
+  <sc-if value="{{ open }}" hint-placeholder-val="{{ false }}">
+    <nav class="nav-mobile" aria-label="Main">
+      <div class="nav-mobile-list">
+        <sc-for list="{{ links }}" as="link" hint-placeholder-count="5"><a class="{{ link.mcls }}" href="{{ link.href }}" aria-current="{{ link.current }}"><span>{{ link.label }}</span><span class="nav-mobile-dot"></span></a></sc-for>
+      </div>
+      <a class="button-primary" href="Contact.dc.html">Book a call</a>
+    </nav>
+  </sc-if>
+</header>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200,&quot;height&quot;:120},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;services&quot;,&quot;gallery&quot;,&quot;about&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { open: false };
+  renderVals() {
+    const active = this.props.active ?? 'home';
+    const pages = [['home', 'Home'], ['services', 'Services'], ['gallery', 'Gallery'], ['about', 'About'], ['contact', 'Contact']];
+    const links = pages.map(([id, label]) => {
+      const on = id === active;
+      return {
+        label,
+        href: label + '.dc.html',
+        cls: on ? 'nav-link nav-link-active' : 'nav-link',
+        mcls: on ? 'nav-mobile-link nav-mobile-link-active' : 'nav-mobile-link',
+        current: on ? 'page' : undefined
+      };
+    });
+    return {
+      links,
+      open: this.state.open,
+      toggleLabel: this.state.open ? 'Close menu' : 'Open menu',
+      toggle: () => this.setState(s => ({ open: !s.open }))
+    };
+  }
+}
+</script>
+</body>
+</html>
